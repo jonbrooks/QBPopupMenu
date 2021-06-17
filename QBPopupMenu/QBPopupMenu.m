@@ -67,6 +67,8 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         self.arrowDirection = QBPopupMenuArrowDirectionDefault;
         self.popupMenuInsets = UIEdgeInsetsMake(10, 10, 10, 10);
         self.margin = 2;
+        self.minItemWidth = 40;
+        self.separatorWidth = 1;
         
         self.color = [[UIColor blackColor] colorWithAlphaComponent:0.8];
         self.highlightedColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.8];
@@ -173,6 +175,10 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
     // Show
     [view addSubview:self.overlayView];
     
+    //Must set this immediately. otherwise, a client can call dismiss while this is animating in
+    //and it will be a no-op and the popup will still be visible
+    self.visible = YES;
+    
     if (animated) {
         self.alpha = 0;
         [self.overlayView addSubview:self];
@@ -180,22 +186,24 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         [UIView animateWithDuration:kQBPopupMenuAnimationDuration animations:^(void) {
             self.alpha = 1.0;
         } completion:^(BOOL finished) {
-            self.visible = YES;
+            
             
             // Delegate
             if (self.delegate && [self.delegate respondsToSelector:@selector(popupMenuDidAppear:)]) {
                 [self.delegate popupMenuDidAppear:self];
             }
+            
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.visibleItemViews[0]);
         }];
     } else {
         [self.overlayView addSubview:self];
-        
-        self.visible = YES;
         
         // Delegate
         if (self.delegate && [self.delegate respondsToSelector:@selector(popupMenuDidAppear:)]) {
             [self.delegate popupMenuDidAppear:self];
         }
+        
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.visibleItemViews[0]);
     }
 }
 
@@ -310,7 +318,10 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         
         CGSize itemViewSize = [itemView sizeThatFits:CGSizeZero];
         
-        if (itemViews.count > 0 && width + itemViewSize.width + pagenatorWidth > maximumWidth) {
+        BOOL isLastItem = (itemView == self.itemViews.lastObject);
+        CGFloat sizeToAdd = isLastItem ? itemViewSize.width : (itemViewSize.width + pagenatorWidth);
+        
+        if (itemViews.count > 0 && width + sizeToAdd > maximumWidth) {
             [groupedItemViews addObject:[itemViews copy]];
             
             // Create new array
@@ -347,6 +358,9 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         QBPopupMenuPagenatorView *leftPagenatorView = [[[self class] pagenatorViewClass] leftPagenatorViewWithTarget:self action:@selector(showPreviousPage)];
         
         [self addSubview:leftPagenatorView];
+        leftPagenatorView.accessibilityLabel = self.paginatorAccessibilityLabel;
+        leftPagenatorView.accessibilityHint = self.paginatorAccessibilityHint;
+        
         [visibleItemViews addObject:leftPagenatorView];
     }
     
@@ -361,6 +375,9 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         QBPopupMenuPagenatorView *rightPagenatorView = [[[self class] pagenatorViewClass] rightPagenatorViewWithTarget:self action:@selector(showNextPage)];
         
         [self addSubview:rightPagenatorView];
+        rightPagenatorView.accessibilityLabel = self.paginatorAccessibilityLabel;
+        rightPagenatorView.accessibilityHint = self.paginatorAccessibilityHint;
+        
         [visibleItemViews addObject:rightPagenatorView];
     }
     
@@ -404,6 +421,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
             width += self.arrowSize;
         }
         
+        width = MAX(width, self.minItemWidth);
         itemView.frame = CGRectMake(offset, 0, width, height);
         
         offset += width;
@@ -804,15 +822,21 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         CGContextSetFillColorWithColor(context, [color CGColor]);
         CGContextFillPath(context);
         
+        // Separator
+        if (direction == QBPopupMenuArrowDirectionDown || direction == QBPopupMenuArrowDirectionUp) {
+            for (QBPopupMenuItemView *itemView in self.visibleItemViews) {
+                [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - self.separatorWidth,
+                                                     rect.origin.y,
+                                                     self.separatorWidth,
+                                                     rect.size.height)
+                             withClipPath:path];
+            }
+        }
+        
         CGPathRelease(path);
     } CGContextRestoreGState(context);
     
-    // Separator
-    if (direction == QBPopupMenuArrowDirectionDown || direction == QBPopupMenuArrowDirectionUp) {
-        for (QBPopupMenuItemView *itemView in self.visibleItemViews) {
-            [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - 1, rect.origin.y, 1, rect.size.height)];
-        }
-    }
+    
 }
 
 - (void)drawHeadInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius highlighted:(BOOL)highlighted
@@ -867,17 +891,32 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
     
     // Separator
     if (!lastItem) {
-        [self drawSeparatorInRect:CGRectMake(rect.origin.x + rect.size.width - 1, rect.origin.y, 1, rect.size.height)];
+        [self drawSeparatorInRect: CGRectMake(rect.origin.x + rect.size.width - self.separatorWidth,
+                                              rect.origin.y,
+                                              self.separatorWidth,
+                                              rect.size.height)
+                     withClipPath: NULL];
     }
 }
 
-- (void)drawSeparatorInRect:(CGRect)rect
+- (void)drawSeparatorInRect:(CGRect)rect withClipPath: (CGPathRef)path
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // Separator
     CGContextSaveGState(context); {
-        CGContextClearRect(context, rect);
+        if (path) {
+            CGContextAddPath(context, path);
+            CGContextClip(context);
+        }
+        
+        if (self.separatorColor) {
+            CGContextSetFillColorWithColor(context, self.separatorColor.CGColor);
+            
+            CGContextFillRect(context, rect);
+        } else {
+            CGContextClearRect(context, rect);
+        }
     } CGContextRestoreGState(context);
 }
 

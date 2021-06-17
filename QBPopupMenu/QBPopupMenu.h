@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for QBPopupMenu.
+FOUNDATION_EXPORT double QBPopupMenuVersionNumber;
+
+//! Project version string for QBPopupMenu.
+FOUNDATION_EXPORT const unsigned char QBPopupMenuVersionString[];
+
 #import "QBPopupMenuItem.h"
 
 @class QBPopupMenu;
@@ -45,8 +51,15 @@ typedef NS_ENUM(NSUInteger, QBPopupMenuArrowDirection) {
 @property (nonatomic, assign) UIEdgeInsets popupMenuInsets;
 @property (nonatomic, assign) CGFloat margin;
 
+@property (nonatomic, assign) CGFloat minItemWidth;
+
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, strong) UIColor *highlightedColor;
+@property (nonatomic, strong) UIColor *separatorColor;
+@property (nonatomic, assign) CGFloat separatorWidth;
+
+@property (nonatomic, copy) NSString *paginatorAccessibilityLabel;
+@property (nonatomic, copy) NSString *paginatorAccessibilityHint;
 
 + (instancetype)popupMenuWithItems:(NSArray *)items;
 - (instancetype)initWithItems:(NSArray *)items;

@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		OBJ_41 /* QBPlasticPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* QBPlasticPopupMenu.m */; };
+		OBJ_42 /* QBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* QBPopupMenu.m */; };
+		OBJ_43 /* QBPopupMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* QBPopupMenuItem.m */; };
+		OBJ_44 /* QBPopupMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* QBPopupMenuItemView.m */; };
+		OBJ_45 /* QBPopupMenuOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* QBPopupMenuOverlayView.m */; };
+		OBJ_46 /* QBPopupMenuPagenatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* QBPopupMenuPagenatorView.m */; };
+		OBJ_48 /* QBPlasticPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* QBPlasticPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_49 /* QBPopupMenuPagenatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* QBPopupMenuPagenatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_50 /* QBPopupMenuOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* QBPopupMenuOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_51 /* QBPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* QBPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_52 /* QBPopupMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* QBPopupMenuItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_53 /* QBPopupMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* QBPopupMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_60 /* QBPlasticPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* QBPlasticPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_61 /* QBPopupMenuPagenatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* QBPopupMenuPagenatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_62 /* QBPopupMenuOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* QBPopupMenuOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_63 /* QBPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* QBPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_64 /* QBPopupMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* QBPopupMenuItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_65 /* QBPopupMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* QBPopupMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_72 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		OBJ_10 /* QBPopupMenuPagenatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuPagenatorView.h; sourceTree = "<group>"; };
+		OBJ_11 /* QBPopupMenuOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuOverlayView.h; sourceTree = "<group>"; };
+		OBJ_12 /* QBPopupMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenu.h; sourceTree = "<group>"; };
+		OBJ_13 /* QBPopupMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuItemView.h; sourceTree = "<group>"; };
+		OBJ_14 /* QBPopupMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuItem.h; sourceTree = "<group>"; };
+		OBJ_15 /* QBPlasticPopupMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPlasticPopupMenu.m; sourceTree = "<group>"; };
+		OBJ_16 /* QBPopupMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenu.m; sourceTree = "<group>"; };
+		OBJ_17 /* QBPopupMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenuItem.m; sourceTree = "<group>"; };
+		OBJ_18 /* QBPopupMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenuItemView.m; sourceTree = "<group>"; };
+		OBJ_19 /* QBPopupMenuOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenuOverlayView.m; sourceTree = "<group>"; };
+		OBJ_20 /* QBPopupMenuPagenatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenuPagenatorView.m; sourceTree = "<group>"; };
+		OBJ_21 /* QBPlasticPopupMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPlasticPopupMenu.h; sourceTree = "<group>"; };
+		OBJ_22 /* QBPopupMenuPagenatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuPagenatorView.h; sourceTree = "<group>"; };
+		OBJ_23 /* QBPopupMenuOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuOverlayView.h; sourceTree = "<group>"; };
+		OBJ_24 /* QBPopupMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenu.h; sourceTree = "<group>"; };
+		OBJ_25 /* QBPopupMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuItemView.h; sourceTree = "<group>"; };
+		OBJ_26 /* QBPopupMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuItem.h; sourceTree = "<group>"; };
+		OBJ_30 /* QBPopupMenu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = QBPopupMenu; sourceTree = SOURCE_ROOT; };
+		OBJ_31 /* QBPopupMenuDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = QBPopupMenuDemo; sourceTree = SOURCE_ROOT; };
+		OBJ_32 /* screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot02.png; sourceTree = "<group>"; };
+		OBJ_33 /* screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot01.png; sourceTree = "<group>"; };
+		OBJ_34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_35 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* QBPlasticPopupMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBPlasticPopupMenu.h; sourceTree = "<group>"; };
+		"QBPopupMenu::QBPopupMenu::Product" /* QBPopupMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QBPopupMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_27 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"QBPopupMenu::QBPopupMenu::Product" /* QBPopupMenu.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_27 /* Tests */,
+				OBJ_28 /* Products */,
+				OBJ_30 /* QBPopupMenu */,
+				OBJ_31 /* QBPopupMenuDemo */,
+				OBJ_32 /* screenshot02.png */,
+				OBJ_33 /* screenshot01.png */,
+				OBJ_34 /* README.md */,
+				OBJ_35 /* LICENSE.txt */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* QBPopupMenu */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* QBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* QBPlasticPopupMenu.h */,
+				OBJ_10 /* QBPopupMenuPagenatorView.h */,
+				OBJ_11 /* QBPopupMenuOverlayView.h */,
+				OBJ_12 /* QBPopupMenu.h */,
+				OBJ_13 /* QBPopupMenuItemView.h */,
+				OBJ_14 /* QBPopupMenuItem.h */,
+				OBJ_15 /* QBPlasticPopupMenu.m */,
+				OBJ_16 /* QBPopupMenu.m */,
+				OBJ_17 /* QBPopupMenuItem.m */,
+				OBJ_18 /* QBPopupMenuItemView.m */,
+				OBJ_19 /* QBPopupMenuOverlayView.m */,
+				OBJ_20 /* QBPopupMenuPagenatorView.m */,
+				OBJ_21 /* QBPlasticPopupMenu.h */,
+				OBJ_22 /* QBPopupMenuPagenatorView.h */,
+				OBJ_23 /* QBPopupMenuOverlayView.h */,
+				OBJ_24 /* QBPopupMenu.h */,
+				OBJ_25 /* QBPopupMenuItemView.h */,
+				OBJ_26 /* QBPopupMenuItem.h */,
+			);
+			path = QBPopupMenu;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		OBJ_47 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_48 /* QBPlasticPopupMenu.h in Headers */,
+				OBJ_49 /* QBPopupMenuPagenatorView.h in Headers */,
+				OBJ_50 /* QBPopupMenuOverlayView.h in Headers */,
+				OBJ_51 /* QBPopupMenu.h in Headers */,
+				OBJ_52 /* QBPopupMenuItemView.h in Headers */,
+				OBJ_53 /* QBPopupMenuItem.h in Headers */,
+				OBJ_60 /* QBPlasticPopupMenu.h in Headers */,
+				OBJ_61 /* QBPopupMenuPagenatorView.h in Headers */,
+				OBJ_62 /* QBPopupMenuOverlayView.h in Headers */,
+				OBJ_63 /* QBPopupMenu.h in Headers */,
+				OBJ_64 /* QBPopupMenuItemView.h in Headers */,
+				OBJ_65 /* QBPopupMenuItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		"QBPopupMenu::QBPopupMenu" /* QBPopupMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "QBPopupMenu" */;
+			buildPhases = (
+				OBJ_40 /* Sources */,
+				OBJ_47 /* Headers */,
+				OBJ_66 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBPopupMenu;
+			productName = QBPopupMenu;
+			productReference = "QBPopupMenu::QBPopupMenu::Product" /* QBPopupMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"QBPopupMenu::SwiftPMPackageDescription" /* QBPopupMenuPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_68 /* Build configuration list for PBXNativeTarget "QBPopupMenuPackageDescription" */;
+			buildPhases = (
+				OBJ_71 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBPopupMenuPackageDescription;
+			productName = QBPopupMenuPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "QBPopupMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"QBPopupMenu::QBPopupMenu" /* QBPopupMenu */,
+				"QBPopupMenu::SwiftPMPackageDescription" /* QBPopupMenuPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_41 /* QBPlasticPopupMenu.m in Sources */,
+				OBJ_42 /* QBPopupMenu.m in Sources */,
+				OBJ_43 /* QBPopupMenuItem.m in Sources */,
+				OBJ_44 /* QBPopupMenuItemView.m in Sources */,
+				OBJ_45 /* QBPopupMenuOverlayView.m in Sources */,
+				OBJ_46 /* QBPopupMenuPagenatorView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_72 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/QBPopupMenu",
+				);
+				INFOPLIST_FILE = QBPopupMenu.xcodeproj/QBPopupMenu_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = QBPopupMenu;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = QBPopupMenu;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/QBPopupMenu",
+				);
+				INFOPLIST_FILE = QBPopupMenu.xcodeproj/QBPopupMenu_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = QBPopupMenu;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = QBPopupMenu;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "QBPopupMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_37 /* Build configuration list for PBXNativeTarget "QBPopupMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_38 /* Debug */,
+				OBJ_39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_68 /* Build configuration list for PBXNativeTarget "QBPopupMenuPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_69 /* Debug */,
+				OBJ_70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

@@ -95,6 +95,9 @@
 
 - (void)performAction
 {
+    if (self.item.actionBlock) {
+        self.item.actionBlock();
+    }
     if (self.item.target && self.item.action) {
         [self.item.target performSelector:self.item.action withObject:nil afterDelay:0];
     }
@@ -141,5 +144,33 @@
         self.button.imageEdgeInsets = UIEdgeInsetsZero;
     }
 }
+
+#pragma mark - Accessibility
+
+- (BOOL)isAccessibilityElement {
+    return YES;
+}
+
+- (UIAccessibilityTraits)accessibilityTraits
+{
+    return UIAccessibilityTraitButton;
+}
+
+- (NSString *)accessibilityLabel {
+    if (_item.accessibilityLabel) {
+        return _item.accessibilityLabel;
+    }
+    
+    return _item.title;
+}
+
+- (NSString *)accessibilityValue {
+    if (_item.accessibilityValue) {
+        return _item.accessibilityValue;
+    }
+    
+    return nil;
+}
+
 
 @end
